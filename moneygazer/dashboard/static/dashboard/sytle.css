@@ -273,6 +273,9 @@ body{
     display:flex;
     align-items: center; 
 }
+.setnav{
+    display: none;
+}
 .list a:hover{
     color: var(--secondary-500);
 }
@@ -466,6 +469,9 @@ body{
 
   
 }
+footer{
+    display: none;
+}
 .dialog1 svg{
     fill: var(--primary-500);
     background-color: transparent;
@@ -524,6 +530,11 @@ body{
     font-weight: 100;
 
 }
+.dialog1 nav button{
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
 @keyframes shadow {
     0%{
         box-shadow: 0 0 10px var(--accent-700);
@@ -549,13 +560,26 @@ body{
 @media(max-width:800px){
     body{
         grid-template-columns: 1fr;   
+        grid-template-rows: auto 1fr auto ;
         min-width: 100dvw;
         min-height: 100dvh;
         padding: 0;
         margin: 0;
+        grid-template-areas:
+        "navbar navbar"
+         "main main"
+         "footer footer";
     }
     .talkbar{
         min-width: 100d;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .setnav{
+        display: block;
     }
     .list a{
         text-decoration: none;
@@ -563,17 +587,31 @@ body{
         font-family: moneygazer;
         width: 200px;
         text-align: center;
+        
       
+    }
+    
+    footer{
+        display: block;
+        grid-area: footer;
+        flex-direction: row;
+
     }
     .list a:hover{
         color: var(--secondary-500);
     }
     .list li{
-        justify-content: center;
         width: 200px;
-        margin-bottom: 5.5px;
+        margin-bottom: px;
         border-radius: 5px;
-
+    }
+    .dialog1{
+        width: 400px;
+        height: 400px;
+    }
+    .list{
+        display: flex;
+        flex-direction: row;
     }
     .sidebar{
         position: fixed;
@@ -587,6 +625,15 @@ body{
     }
     .select{
         color: var(--primary);    
+    }
+    .setnav button{
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+
+    }
+    .setnav button svg{
+        fill: var(--primary-500);
     }
     .sidebutton{
         opacity: 1;
@@ -614,9 +661,36 @@ body{
         height: 100px;
         padding: 0; 
     }
+    .jemo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: var(--background-200);
+        list-style-type: none;
+        align-items: center;
+    }
+    .jemo button{
+        color: var(--primary-500);
+        text-decoration: none;
+        font-family: moneygazer;
+        border-radius: 20%;
+        background-color: var(--background-50);
+        width: 70px;
+        border: 0;
+        outline: 0;
+    }
+    .jemo li{
+        margin: 0 2% 0;
+      
+    }
+    .jemo svg{
+        fill: var(--accent-600);
+    }
+
+    
     
 }
   
   
-    
+ 
    
