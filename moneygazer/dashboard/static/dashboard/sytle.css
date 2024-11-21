@@ -542,6 +542,7 @@ footer{
     50%{
         box-shadow: 0 0 20px var(--accent-900);
     }
+
     100%{
         box-shadow: 0 0 10px var(--accent-700);
     }
@@ -664,10 +665,12 @@ footer{
     .jemo{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
+    
         background-color: var(--background-200);
         list-style-type: none;
         align-items: center;
+        margin-left: -55px;
     }
     .jemo button{
         color: var(--primary-500);
@@ -678,9 +681,11 @@ footer{
         width: 70px;
         border: 0;
         outline: 0;
+        
+    
     }
     .jemo li{
-        margin: 0 2% 0;
+        margin: 0 3% 0;
       
     }
     .jemo svg{
