@@ -443,7 +443,36 @@ body{
       transform: rotate(0deg);
     }
   }
+  .dialog1{
+    width: 1000px;
+    height: 500px;
+    background-color: var(--background-50);
+}
+.dialog1 nav{
+    background-color: var(--background-100);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-500);
+    font-family: moneygazer;
+    translate: -30px;
   
+}
+.dialog1 svg{
+    fill: var(--primary-500);
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+.settings{
+    text-align: center;
+}
+.settings a{
+    color: var(--primary-500);
+    font-family: moneygazer;
+  
+}
   .input:checked + .slider {
     background-color: #183153;
   }
