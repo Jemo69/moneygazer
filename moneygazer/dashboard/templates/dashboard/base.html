@@ -36,7 +36,29 @@
             
             
         </ul>
-     </div>k
+     </div>
+     <div class="settings">
+        <a onclick="showsreason()">Settings</a>
+        <dialog  class="dialog1" id="dialog">
+           <nav>
+             <h3>Settings</h3>  <button onclick="closesreason()"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="m251.33-204.67-46.66-46.66L433.33-480 204.67-708.67l46.66-46.66L480-526.67l228.67-228.66 46.66 46.66L526.67-480l228.66 228.67-46.66 46.66L480-433.33 251.33-204.67Z"/></svg></button>
+           </nav>
+          <main>
+            <a href="{% url 'account_logout' %}">Sign out</a>
+          </main>
+        </dialog>
+        <script>
+          const dialogs =  document.getElementById("dialog")
+          function showsreason(){
+              dialogs.showModal()
+
+          }
+          function closesreason(){
+              dialogs.close()
+          }
+        
+      </script>
+     </div>
         
        
     </aside>
