@@ -447,6 +447,12 @@ body{
     width: 1000px;
     height: 500px;
     background-color: var(--background-50);
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px var(--accent-700);
+    border-radius: 5px;
+    padding: 25px;
+   
 }
 .dialog1 nav{
     background-color: var(--background-100);
@@ -456,7 +462,8 @@ body{
     align-items: center;
     color: var(--primary-500);
     font-family: moneygazer;
-    translate: -30px;
+    border-radius: 5px;
+
   
 }
 .dialog1 svg{
@@ -465,13 +472,68 @@ body{
     border: 0;
     outline: 0;
 }
+.dialog1 h3{
+    color: var(--primary-500);
+}
+.setbtn{
+    color: var(--primary-500);
+}
 .settings{
     text-align: center;
 }
 .settings a{
-    color: var(--primary-500);
+    
     font-family: moneygazer;
   
+}
+.signout1{
+    color: var(--text-700);
+    font-size: 18px;
+    text-decoration: none;
+}
+.signout{
+    display: flex;
+    align-items: center;
+     background-color: var(--background-200);
+     color: var(--text-700);
+     margin-top: 25px;
+     margin-bottom: 25px;
+     width: 100%;
+     height:70px ;
+     border-radius: 5px;
+     box-shadow: 0 0 10px var(--accent-700);
+     animation: shadow 3s linear infinite;
+     padding: 5px;
+    
+
+}
+.theme{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-700);
+    background: var(--background-200);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px var(--accent-700);
+    animation: shadow 3s linear infinite;
+    font-family: moneygazer;
+    font-size: 18px;
+    font-weight: 100;
+
+}
+@keyframes shadow {
+    0%{
+        box-shadow: 0 0 10px var(--accent-700);
+    }
+    50%{
+        box-shadow: 0 0 20px var(--accent-900);
+    }
+    100%{
+        box-shadow: 0 0 10px var(--accent-700);
+    }
 }
   .input:checked + .slider {
     background-color: #183153;
