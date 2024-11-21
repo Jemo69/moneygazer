@@ -1,0 +1,166 @@
+{# djlint:off H006 #}
+{% load i18n %}
+{% load static %}
+{% load allauth_ui %}
+<!DOCTYPE html>
+<html >
+    <head>
+       
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {%load static %}
+        <link rel="icon"static href="{%static 'dashboard/moneygazer.jpg'%}">
+
+       
+     
+        <title>
+            money gazer
+        </title>
+      
+       
+        {% block extra_head %}
+            
+            <link rel="stylesheet" href="{% static 'allauth_ui/output.css' %}">
+            <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+          
+        {% endblock extra_head %}
+    </head>
+    <body class="name">
+        <div class="cool">
+            {% block body %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div role="alert"
+                         class="text-sm md:text-base alert alert-{{ message.tags }}">
+                        <span><strong>{{ message }}</strong></span>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+            <div class="cool">
+                {% block content %}
+            {% endblock content %}
+            </div>
+            <div id="cool" class="mx-auto [&_a]:link text-sm flex flex-col md:flex-row items-center justify-center gap-3 mt-3">
+                {% if user.is_authenticated %}
+                    {% url 'account_email' as email_url %}
+                    {% if email_url %}
+                        <a href="{{ email_url }}">{% trans "Change Email" %}</a>
+                    {% endif %}
+                    {% url 'account_change_password' as change_password_url %}
+                    {% if change_password_url %}
+                        <a href="{{ change_password_url }}">{% trans "Change Password" %}</a>
+                    {% endif %}
+                    {% url 'mfa_index' as mfa_url %}
+                    {% if mfa_url %}
+                        <a href="{{ mfa_url }}">{% trans "Two-Factor Authentication" %}</a>
+                    {% endif %}
+                    {% url 'usersessions_list' as usersessions_list_url %}
+                    {% if usersessions_list_url %}
+                        <a href="{{ usersessions_list_url }}">{% trans "Sessions" %}</a>
+                    {% endif %}
+                    {% url 'account_logout' as logout_url %}
+                    {% if logout_url %}
+                        <a href="{{ logout_url }}">{% trans "Sign Out" %}</a>
+                    {% endif %}
+                {% else %}
+                    {% url 'account_login' as login_url %}
+                    <!-- {% if login_url %}
+                    <p>by clicking signup you are agreeing to our terms and conditions</p> -->
+                        <a href="{{ login_url }}">{% trans "Sign In" %}</a>
+                    {% endif %}
+                    {% url 'account_signup' as signup_url %}
+                    
+                    {% if signup_url %}
+                      
+                        <a href="{{ signup_url }}">{% trans "Sign Up" %}</a>
+                        
+                    <!-- <p>by clicking signup you are agreeing to our terms and conditions</p> -->
+                     
+                    {% endif %}
+                   
+                {% endif %}
+            </div>
+        {% endblock body %}
+        {% block extra_body %}
+        {% endblock extra_body %}
+    </body>
+    <style>
+        :root {
+    --text-50: #020818;
+    --text-100: #031030;
+    --text-200: #062060;
+    --text-300: #092f90;
+    --text-400: #0c3fc0;
+    --text-500: #0f4ff0;
+    --text-600: #3f72f3;
+    --text-700: #6f95f6;
+    --text-800: #9fb9f9;
+    --text-900: #cfdcfc;
+    --text-950: #e7edfd;
+  
+    --background-50: #060b13;
+    --background-100: #0c1527;
+    --background-200: #192a4d;
+    --background-300: #253f74;
+    --background-400: #32559a;
+    --background-500: #3e6ac1;
+    --background-600: #6588cd;
+    --background-700: #8ba5da;
+    --background-800: #b2c3e6;
+    --background-900: #d8e1f3;
+    --background-950: #ecf0f9;
+  
+    --primary-50: #191000;
+    --primary-100: #321f01;
+    --primary-200: #653f01;
+    --primary-300: #975e02;
+    --primary-400: #ca7d02;
+    --primary-500: #fc9d03;
+    --primary-600: #fdb035;
+    --primary-700: #fdc468;
+    --primary-800: #fed89a;
+    --primary-900: #feebcd;
+    --primary-950: #fff5e6;
+  
+    --secondary-50: #080218;
+    --secondary-100: #11042f;
+    --secondary-200: #21075f;
+    --secondary-300: #320b8e;
+    --secondary-400: #430ebe;
+    --secondary-500: #5412ed;
+    --secondary-600: #7641f1;
+    --secondary-700: #9871f4;
+    --secondary-800: #baa0f8;
+    --secondary-900: #ddd0fb;
+    --secondary-950: #eee7fd;
+  
+    --accent-50: #0e0218;
+    --accent-100: #1c042f;
+    --accent-200: #37075f;
+    --accent-300: #530b8e;
+    --accent-400: #6f0ebe;
+    --accent-500: #8a12ed;
+    --accent-600: #a241f1;
+    --accent-700: #b971f4;
+    --accent-800: #d0a0f8;
+    --accent-900: #e8d0fb;
+    --accent-950: #f3e7fd;
+  
+  }
+  .name{
+    background-color: var(--background-100); 
+    min-height: 100vh;
+
+  }
+  .cool{
+    background-color: var(--background-50);
+    color: var(--text-300);
+  }
+  #cool{
+    background-color: var(--background-50);
+    color: var(--text-300);
+  }
+
+    </style>
+</html>

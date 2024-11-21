@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'legal/home.css'%}">
+    <link rel="stylesheet" href="{%static 'legal/form.css'%}">
+    <link rel="icon" static href="{% static 'legal/moneygazer.jpg' %}">
+    <title>Moneygazer</title>
+</head>
+<body>
+  
+    <div class="topic">
+         <div>
+            <p class="title">MEET MONEY GAZER </p>
+            <p class="details">Your all in one expense management  solution  </p>
+            <a class="beginner" href="accounts/signup">GET STARTED 
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#060b13;"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+
+            </a>
+         </div>
+    </div>
+    <div class="featurecontainer">
+        <div class="featuretextcontainer">
+           <h1 class="featuretext">Our core features</h1>
+
+        </div>
+
+        <div class="feature">
+            <div class="tax">
+               
+                    <svg xmlns="http://www.w3.org/2000/svg" height="150px" viewBox="0 -960 960 960" width="150px" fill="#e8eaed"><path d="M280-280h80v-280h-80v280Zm160 0h80v-400h-80v400Zm160 0h80v-160h-80v160Zm80-320v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h360v200q0 33 23.5 56.5T640-560h200v360q0 33-23.5 56.5T760-120H200Z"/></svg>
+                    <h1>Financial education</h1>
+         
+                <p>With moneygazer with say bye to uneducated financial descion</p>
+                <a class="reasonbtn" onclick="showsreason()">Reason</a>
+                <dialog id="reason2">
+
+                    <h1 class="resontitle">
+                        Reason
+                    </h1>
+                    <p class="reanontext">With our state of the chatbot you can ask question to make saving easier it can give tips about how to invest </p>
+                    <h4 class="teirin">Note: This only availbe in our pro tier</h4>
+                    <a class="closebtn"  onclick="closesreason()">Got it</a>
+                </dialog>
+                <script>
+                    const dialogs =  document.getElementById("reason2")
+                    function showsreason(){
+                        dialogs.showModal()
+
+                    }
+                    function closesreason(){
+                        dialogs.close()
+                    }
+                  
+                </script>
+            </div>
+            <div class="tax">
+                <svg xmlns="http://www.w3.org/2000/svg" height="150px" viewBox="0 -960 960 960" width="150px" fill="#e8eaed"><path d="M640-520q17 0 28.5-11.5T680-560q0-17-11.5-28.5T640-600q-17 0-28.5 11.5T600-560q0 17 11.5 28.5T640-520Zm-320-80h200v-80H320v80ZM180-120q-34-114-67-227.5T80-580q0-92 64-156t156-64h200q29-38 70.5-59t89.5-21q25 0 42.5 17.5T720-820q0 5-5 23-4 11-7.5 22.5T702-751l91 91h87v279l-113 37-67 224H480v-80h-80v80H180Z"/></svg>
+                <h1>Comprehensive budgeting</h1>
+                <p>with our budgeting tools you can make saving easy with reminders </p>
+                <a class="reasonbtn"  onclick="showssreason()">Reason</a>
+                <dialog id="reason">
+
+                    <h1>
+                        Reason
+                    </h1>
+                    <p>Our Comprehensive budgeting tools you can save your money and have reminder on your bill</p>
+                    <h4>Note: it avaliable on all our plans but bank intergration involve going the pro plan  </h4>
+                    <a class="closebtn" onclick="closessreason()">Got it</a>
+                </dialog>
+                <script>
+                    const dialog =  document.getElementById("reason")
+                    function showssreason(){
+                        dialog.showModal()
+
+                    }
+                    function closessreason(){
+                        dialog.close()
+                    }
+                  
+                </script>
+                
+            </div>
+            <div class="tax">
+                <svg xmlns="http://www.w3.org/2000/svg" height="150px" viewBox="0 -960 960 960" width="150px" fill="#e8eaed"><path d="M212-241v-339h60v339h-60Zm242 0v-339h60v339h-60ZM80-121v-60h800v60H80Zm608-120v-339h60v339h-60ZM80-640v-53l400-228 400 228v53H80Z"/></svg>
+              
+                <h1>Tax calculation</h1>
+                <p>When the time for taxes rolls around, you'll never have to worry.</p>
+                <a class="reasonbtn" onclick="showreason()">Reason</a>
+                <dialog id="reason1">
+
+                    <h1>
+                        Reason
+                    </h1>
+                    <p>With our state techonlogies with the information you can read our <a class="anchor" href="privacy">privacy poilcy</a> to know what we carry when can make that you accurately know your taxes   </p>
+                    <h4>NOTE : that is feature is only avaible in our pro teir </h4>
+                    <a  class="closebtn" onclick="closereason()">Got it</a>
+                </dialog>
+                <script>
+                    const dialosg =  document.getElementById("reason1")
+                    function showreason(){
+                        dialosg.showModal()
+
+                    }
+                    function closereason(){
+                        dialosg.close()
+                    }
+                  
+                </script>
+            </div>
+    </div>
+
+    </div>
+    <div class="uishowoff">
+        
+        <h1>See our user frendly user inferface </h1>
+
+    </div>
+  
+    <div class="pricel">
+        <h1 class="pricetext1" >THIS ARE OUR PRICING</h1>
+   
+        
+        <div class="prices">   
+      
+            <div  id="paymentpaln" class="basic">
+                <h3 class="paymentopt">Basic</h3>
+                <p class="price" >$0.00</p>
+                <div class="feature1">
+                    <h4 class="flistt">
+                        Features
+                    </h4>
+                    <ul class="ulflist">
+                        <li class="flist">
+                            Expense note 
+                        </li>
+                        <li class="flist">
+                            budget setting 
+                        </li>
+                        <li class="flist">
+                            budget reminder
+                        </li>
+                        <li class="flist">
+                            income report
+                        </li>
+                    </ul>
+                </div>
+                <button class="paybtn" type="">Pay us</button>
+
+               
+            </div>
+            <div id="paymentpaln"  class="yearly">
+                <h3 class="paymentopt">Pro</h3>
+                <p class="price" >$5.99</p> 
+                <div class="feature1">
+                    <h4 class="flistt">
+                        Features
+                    </h4>
+                    <ul class="ulflist">
+                        <li class="flist">
+                            Everything in Basic plan
+                        </li>
+                        <li class="flist">
+                            Investment tracking
+                        </li>
+                        <li class="flist">
+                            Tax calculation
+                           
+                        </li>
+                        <li class="flist">
+                            Bank account intergration
+                        </li>
+                   
+                    </ul>
+                </div> 
+                <button class="paybtn" type="">Pay us</button>
+                
+            </div>
+            <!-- <div id="paymentpaln"  class="annually">
+                <h3 class="paymentopt"></h3>
+                <h1 class="price" >$98.99</h1
+            </div>
+    
+        </div> -->
+    
+    </div> 
+    <div class="getstarted">
+         <div class="box">
+
+          
+                <p>join our discord for lastest update</p>
+                <a href="https://discord.gg/QbDEJ3t7">JOIN NOW</a>
+
+       
+        </div>
+    </div>
+    <div class="concact"></div>
+    <footer >
+        <div class="top">
+            <div class="brand">
+                {% load static %}
+                <img src="{%static 'legal/moneygazer.jpg'%}" alt="no">
+                <h1>Money Gazer</h1>
+            </div>
+            <div>
+                <hr>
+            </div>
+            <div class="link">
+                <a href="terms">Terms</a>
+                <a href="https://discord.gg/QbDEJ3t7">Discord</a>
+                <a href="support">Support</a>
+                <a href="privacy">Privacy poilcy</a>
+            </div>
+            <div>
+                <div>
+                    <hr>
+                </div>
+             
+                    
+            </div>
+            </div>
+
+        </div>
+        <div class="bottom">
+            <div class="copyrightdiv"><p >&copy;money gazer</p></div>
+        </div>
+    </footer>
+</body>
+</html>
