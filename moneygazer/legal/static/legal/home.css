@@ -2,6 +2,10 @@
     font-family: moneygazer;
     src: url(./FONT/Roboto-Black.ttf);
 }
+@font-face {
+    font-family: moneygazer1;
+    src: url(./FONT/Anurati.otf);
+}
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
@@ -143,6 +147,7 @@ body{
 .title{
     font-size: 100px;
     color: var(--primary-300);
+    font-family: moneygazer1;
 }
 .details{
     font-size: 30px;
