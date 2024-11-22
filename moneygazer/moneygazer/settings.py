@@ -32,9 +32,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-
+    'crispy_bulma',
     "allauth_ui",
-    "allauth.socialaccount.providers.github",
     "widget_tweaks",
     "slippers",
     "support",
@@ -154,3 +153,4 @@ ACCOUNT_AUTHENICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 # settings.py
 ALLAUTH_UI_THEME = "light"
+CRISPY_TEMPLATE_PACK = 'bulma'
